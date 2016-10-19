@@ -22,9 +22,7 @@ virtualenv flask_env
 
 3.)Abrí el puerto requerido para el implementar el servicio, yo elegi usar el 8080:
 
-	
-	
-	
+![Log](https://github.com/EstebanMV96/Parciales/blob/master/Imagenes/iptables.PNG)
 	
 	
 
