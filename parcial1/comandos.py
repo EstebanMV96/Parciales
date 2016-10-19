@@ -2,13 +2,14 @@
 from subprocess import Popen, PIPE
 
 def lsArchivos():
-	archivos = Popen(["ls","/home/filesystem_user/parciales/parcial1"], stdout=PIPE, stderr=PIPE).communicate()[0].split('\n')
+	#HOLA PROFE LOS ARCHIVOS LOS ESTABA CREANDO EN "/home/filesystem_user/Parciales/parcial1"
+	archivos = Popen(["ls","/home/filesystem_user/Parciales/parcial1"], stdout=PIPE, stderr=PIPE).communicate()[0].split('\n')
 	return filter(None,archivos)
 
 def deleteFiles(nomArchivo):
 	vip=["comandos.py","comandos.pyc","files.py"]
 	if nomArchivo not in vip:
-		kill=Popen(["rm","-f","/home/filesystem_user/parciales/parcial1/"+nomArchivo], stdout=PIPE, stderr=PIPE)
+		kill=Popen(["rm","-f","/home/filesystem_user/Parciales/parcial1/"+nomArchivo], stdout=PIPE, stderr=PIPE)
 		kill.wait()
 		return True
 
@@ -22,7 +23,7 @@ def darArchivosRecientes():
 
 def crearArchivo(nombre,contenido):
 	nuevoArchivo= Popen(["touch",nombre], stdout=PIPE, stderr=PIPE)
-	asignarContenido= Popen(['echo',contenido,'>>',"/home/filesystem_user/parciales/parcial1/"+nombre],shell=True, stdout=PIPE, stderr=PIPE)
+	asignarContenido= Popen(['echo',contenido,'>>',"/home/filesystem_user/Parciales/parcial1/"+nombre],shell=True, stdout=PIPE, stderr=PIPE)
 	asignarContenido.wait()
 	if nombre in lsArchivos():
 		return True
