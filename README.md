@@ -20,6 +20,12 @@ virtualenv flask_env
 
 	. envs/flask_env/bin/activate
 
+3.)Abrí el puerto requerido para el implementar el servicio, yo elegi usar el 8080:
 
+	
+	
+	
+	
+	
 
 
