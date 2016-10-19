@@ -2,7 +2,7 @@
 
 ##Esteban Moya Vargas-13207005
 
-Antes de realizar la implementación de los servicios web, realicé lo siguente:
+###Antes de realizar la implementación de los servicios web, realicé lo siguente:
 
 1.) Cree el ambiente en el usuario filesystem_user:
 
@@ -19,11 +19,22 @@ virtualenv flask_env
 
 
 	. envs/flask_env/bin/activate
+	
 
-3.)Abrí el puerto requerido para el implementar el servicio, yo elegi usar el 8080:
+3.) Instale Flask:
+
+	pip install Flask 
+
+4.)Abrí el puerto requerido para el implementar el servicio, yo elegi usar el 8080:
 
 ![Log](https://github.com/EstebanMV96/Parciales/blob/master/Imagenes/iptables.PNG)
 	
+5.)Reinicie el servicio:
 	
+	
+	service iptables restart
+
+
+
 
 
