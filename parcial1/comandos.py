@@ -23,7 +23,9 @@ def darArchivosRecientes():
 
 def crearArchivo(nombre,contenido):
 	nuevoArchivo= Popen(["touch",nombre], stdout=PIPE, stderr=PIPE)
-	asignarContenido= Popen(['echo',contenido,'>>',"/home/filesystem_user/Parciales/parcial1/"+nombre],shell=True, stdout=PIPE, stderr=PIPE)
-	asignarContenido.wait()
+	nuevoArchivo.wait()
+	file=open(nombre,"w")
+	file.write(contenido)
+	file.close()
 	if nombre in lsArchivos():
 		return True
